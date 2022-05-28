@@ -48,7 +48,7 @@ const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (
 
   ;(async () => {
     let panel_result = {
-      title: '📺 𝑺𝒕𝒓𝒆𝒂𝒎𝒊𝒏𝒈 𝒖𝒏𝒍𝒐𝒄𝒌𝒊𝒏𝒈 ⏰ ' + new Date().Format("HH:mm:ss"),
+      title: '📺 『流媒体检测』 ⏳ : ' + new Date().Format("HH:mm:ss"),
       content: '',
       icon: '4k.tv.fill',
       'icon-color': '#FF2D55',
