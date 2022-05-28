@@ -48,7 +48,7 @@ const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (
 
   ;(async () => {
     let panel_result = {
-      title: '📺 𝑺𝒕𝒓𝒆𝒂𝒎𝒊𝒏𝒈 𝒖𝒏𝒍𝒐𝒄𝒌𝒊𝒏𝒈 ⏰ ' + new Date().Format("HH:mm:ss"),
+      title: '📺  流媒体检测  🛰 : ' + new Date().Format("HH:mm:ss"),
       content: '',
       icon: '4k.tv.fill',
       'icon-color': '#FF2D55',
@@ -64,7 +64,7 @@ const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (
       } else if (status==STATUS_AVAILABLE){
         //console.log(2)
         console.log(region)
-        disney_result="𝑫𝒊𝒔𝒏𝒆𝒚+: «已解锁𝘿+» ➺ " +`${getFlagEmoji(region)}  ` + region.toUpperCase()
+        disney_result="𝑫𝒊𝒔𝒏𝒆𝒚+: «已解锁𝑫+» ➺ " +`${getFlagEmoji(region)}  ` + region.toUpperCase()
         // console.log(result["Disney"])
       } else if (status==STATUS_NOT_AVAILABLE) {
         //console.log(3)
@@ -116,14 +116,14 @@ panel_result['content'] = content
       })
     }
   
-    let youtube_check_result = '𝙔𝙤𝙪𝙏𝙪𝙗𝙚: '
+    let youtube_check_result = '𝒀𝒐𝒖𝑻𝒖𝒃𝒆: '
   
     await inner_check()
       .then((code) => {
         if (code === 'Not Available') {
           youtube_check_result += '不支持解锁🚫'
         } else {
-          youtube_check_result += '«已解锁𝙋𝙧𝙚𝙢𝙞𝙪𝙢» ➺ ' +`${getFlagEmoji(code)}  `+ code.toUpperCase()
+          youtube_check_result += '«已解锁𝑷𝒓𝒆𝒎𝒊𝒖𝒎» ➺ ' +`${getFlagEmoji(code)}  `+ code.toUpperCase()
         }
       })
       .catch((error) => {
@@ -172,14 +172,14 @@ panel_result['content'] = content
       })
     }
   
-    let netflix_check_result = 'ɴᴇᴛғʟɪx: '
+    let netflix_check_result = '𝑵𝒆𝒕𝒇𝒍𝒊𝒙: '
   
     await inner_check(81215567)
       .then((code) => {
         if (code === 'Not Found') {
           return inner_check(80018499)
         }
-        netflix_check_result += '«已完整解锁𝙉𝙁𝙇𝙓» ➺ '  +`${getFlagEmoji(code)}  ` + code.toUpperCase()
+        netflix_check_result += '«已完整解锁𝑵𝑭𝑳𝑿» ➺ '  +`${getFlagEmoji(code)}  ` + code.toUpperCase()
         return Promise.reject('BreakSignal')
       })
       .then((code) => {
